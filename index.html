@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Let's Linux!</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <link rel="stylesheet" href="css/custom.css" />
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="keywords" content="">
+
+        <!-- Prettify -->
+        <link href="prettify.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="prettify.js"></script>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet"> 
+
+    </head>
+    <body onload="prettyPrint()">
+
+        <!-- Side Navigation -->
+            <div class="uk-offcanvas-content">
+                    
+
+                            <!-- The whole page content goes here -->
+                    
+                            
+                    
+                            <!-- This is an anchor toggling the off-canvas -->
+                            <a href="#navbutton" uk-toggle></a>
+                    
+                            <!-- This is the off-canvas -->
+                            <div id="navbutton" uk-offcanvas>
+                                <div class="uk-offcanvas-bar n-nav">
+                    
+                                    <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+                                    <div class="uk-width-1-10@s uk-width-2-20@m">
+                                        <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
+                                            <li class="uk-active"><a href="#intro" uk-scroll>Introduction</a></li>
+                                            <li class="uk-parent">
+                                                <a href="#shell" uk-scroll>Using the Linux Shell</a>
+                                                <ul class="uk-nav-sub">
+                                                    <li><a href="#basiccommands" uk-scroll>Basic Commands</a></li>
+                                                    <li><a href="#install" uk-scroll>Installing & Updating Software</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="uk-parent">
+                                                <a href="#gui" uk-scroll>Using the Linux GUIs</a>
+                                                <ul class="uk-nav-sub">
+                                                    <li><a href="#pickinggui" uk-scroll>Picking the right Desktop Environment</a></li>
+                                                    <li><a href="#usinggui" uk-scroll>Using it well</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                    
+                                </div>
+                            </div>
+                    
+                        </div>
+
+            <!-- Content -->
+            <div class="uk-container n-mainpage">
+
+                    <button class="uk-button uk-button-default uk-align-center n-button" uk-toggle="target: #navbutton" uk-icon="icon: menu"></button>
+                
+                    <h1 class="uk-text-center uk-padding-large n-mainhead uk-animation-slide-top">Let's Linux!</h1>
+                    <div class="uk-container uk-padding"> 
+                           
+                        
+                                <article class="uk-article n-article uk-padding" id="intro">
+
+
+                                     <h2 class="uk-text-center@m uk-text-left@s">Introduction</h1>
+                                    <p class="uk-text-left n-articletext">Welcome to Let's Linux, please keep in mind this is a work in progress. On this site you will find an easy to understand guide on how to use the Linux Operating System in your projects or your everyday life.</p>
+
+                                    <p class="uk-text-left n-articletext">Why should I use Linux? There are many reason why you might want to give Linux a try. It is such a versatile and expandable operating system that it can be used for a number of tasks requiring stability and performance.
+
+                                    <ul class="uk-list uk-list-striped">
+                                        <li>Computer Science</li>
+                                        <li>IOT and Electronics Projects</li>
+                                        <li>Server Hosting</li>
+                                        <li>Desktop Productivity Use</li>
+                                    </ul>
+
+
+                                    </p>
+
+                                    <p class="uk-text-left n-articletext">
+
+                                        On this site we will cover the basic skills you need to get started with Linux in these areas.
+                                        Whenever you see this symbol, make note of it because its probably important:
+                                        <span class="uk-label uk-label-danger"><span uk-icon="warning"></span></span>
+
+                                    </p>
+
+                                </article>
+
+                                                        
+                                <article class="uk-article n-article uk-padding" id="shell">
+
+                                    <h2 class="uk-text-center@m uk-text-left@s">The Shell</h1>
+
+                                    <p class="uk-text-left n-articletext">
+                                        
+                                        The shell is the part of Linux that scares people away. In reality its actually quite simple and if you get really good at it, it's faster than the GUI. The very first thing you should learn in Linux is how to operate the shell. It is the basis of interacting with the OS and is how we will do the majority of software installation.
+                                        
+                                        <h3 id="basiccommands">Basic Commands:</h3>
+                                        
+                                            <h4>dir</h4>
+                                            This command will list out all of the files and folders in the current directory you are in. For example:
+                                            <pre class="prettyprint">
+root@hostname:/# dir
+bin  boot  dev  etc  home  initrd.img  initrd.img.old  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  snap  srv  sys  tmp  usr  var  vmlinuz  vmlinuz.old
+                                            </pre>
+
+
+                                            <h4>cd "Directory"</h4>
+                                            This command will change the directory you are in. For example:
+                                            <pre class="prettyprint">
+root@hostname:/# cd etc
+root@dta:/etc#
+                                            </pre>
+                                            You are now inside the folder "etc"
+
+                                            <h4>mkdir "name"</h4>
+                                            This command will create a new directory (folder). For example:
+                                            <pre class="prettyprint">
+root@hostname:/# mkdir stuff
+                                            </pre>
+                                            you just created a folder called "stuff"
+
+
+                                            <h4>rm "Directory or File"</h4><span class="uk-label uk-label-danger"><span uk-icon="warning"></span></span>
+                                            <b>This command will DELETE a file or directory, use with caution. There is no confirmation for this command and using it wrong could delete important system files!</b>
+                                            <pre class="prettyprint">
+root@hostname:/# rm trash.sh
+                                            </pre>
+                                            This would delete the file trash.sh
+
+                                            <h4>nano stuff.sh</h4>
+                                            Nano is one of the many text editors available for Linux, it may or may not be installed on your system, but in most versions it comes preinstalled. We are using nano for now because it is extremely easy for beginners, Vim is preferred by programmers but we'll touch on that later.  
+                                            <pre class="prettyprint">
+root@hostname:/# nano stuff.sh
+                                            </pre>
+                                            You should see something open like this:
+
+                                            <img src="img/nano01.png"></img>
+
+                                            You can type stuff just as you would in something like notepad. You can interact with the editor by using the codes at the bottom of the screen. ^ is the same as CTRL, for example you can save and exit by pressing CTRL-x. 
+
+                                        <h3 id="install">Installing & Updating Software:</h3>
+
+                                        <p class="uk-text-left n-articletext">
+
+                                            Keeping your system up to date is crucial to it performing well and not running into errors. Linux unlike Windows or OSX uses a package manager system, for this example we will use the "apt" package manager which will come installed with a Debian based Linux Distribution. This includes Ubuntu and Stock Debian.
+
+                                        </p>
+
+                                        <p class="uk-text-left n-articletext">
+                            
+                                            First a bit on what package managers actually do. A package manager is where you will download most of your software from on Linux. Most of the time you won't be downloading binaries from your web browser, you will be installing it via a package manager. Think of the package manager like a giant app store full of open source goodies.
+                                            
+                                            <h4>sudo "command"</h4>
+                                            The sudo command executes a command as root (administrator) even if you are not logged in as root.
+                                            <pre class="prettyprint">
+someguy@hostname:/# sudo eatallthecookies
+you ate the cookies as admin!
+                                            </pre>
+                                            This is important for our next step, the package manager (apt) requires root permissions so you must run all commands starting with sudo.
+
+                                            <h4>sudo apt update</h4>
+                                            This command will download a list of packages from the repository.<br>
+                                            <b>NOTE: This command does not update the packages, it just checks the repository for updates!</b>
+                                            <pre class="prettyprint">
+someguy@hostname:/# sudo apt update
+                                            </pre>
+
+                                            <h4>sudo apt upgrade</h4>
+                                            This command actually updates the packages you currently have installed. You must run "sudo apt update" before this to check for updated packages.
+                                            <pre class="prettyprint">
+someguy@hostname:/# sudo apt upgrade
+                                            </pre>
+                                            When you get back to a normal "someguy@hostname:/#" prompt your update is complete.
+
+                                            <h4>sudo apt install "package name"</h4>
+                                            This command will install a package of your choice! Make sure you run "sudo apt update" first if you haven't already.
+                                            <pre class="prettyprint">
+someguy@hostname:/# sudo apt install nano
+                                            </pre>
+                                            This will install the text editor "Nano" from the repository.
+
+                                            You can view a list of packages for your Distribution on their website. For now, since we are using Ubuntu/Debian, here is the Ubuntu package repository:
+                                            <b><a class="uk-link" href="https://packages.ubuntu.com/" target="_blank">Search for Packages</a></b>
+
+                                        </p>
+                                            
+
+                                    </p>
+                                    
+                                </article>
+
+
+                                <article class="uk-article n-article uk-padding" id="gui">
+                                        
+                                    <h2 class="uk-text-center@m uk-text-left@s">Using a Graphical Interface</h1>
+                                        
+                                    <p class="uk-text-left n-articletext" id="pickinggui">
+                                                                              
+                                        A graphical interface can be useful in certain circumstances where you are doing basic tasks or just aren't interested in the technical side of Linux. In Linux however, there are many graphical interfaces to choose from and it can be difficult at times. Some of the interfaces I recommend are:
+                                        <ul class="uk-list uk-list-striped">
+                                                <li><a class="uk-link" href="https://mate-desktop.org/" target="_blank">MATE</a></li>
+                                                <li><a class="uk-link" href="https://www.gnome.org/" target="_blank">GNOME</a></li>
+                                                <li><a class="uk-link" href="https://xfce.org/" target="_blank">Xfce</a></li>
+                                                <li><a class="uk-link" href="https://lxde.org/" target="_blank">LXDE</a></li>
+                                        </ul>
+                                    </p>
+                                    <p class="uk-text-left n-articletext">
+
+                                        The installations vary on these but you can find instructions for your Distribution on their website.
+
+                                    </p>
+                                    <p class="uk-text-left n-articletext" id="usinggui">
+
+                                        The key to using a GUI in Linux effectively is using it right. You shouldn't be using the GUI for everything, in Linux a graphical interface makes difficult tasks easy and a command line interface makes impossible tasks possible.  
+                                        <h5>Things I <b>wouldn't</b> do on a GUI</h5>
+                                        <ul class="uk-list">
+                                            <li>Install/Update Software</li>
+                                            <li>Delete/Copy Large files or folders</li>
+                                            <li>Run Scripts</li>
+                                            <li>Manage a server running linux! (GUI's will eat your performance for dinner!)</li>
+                                        </ul>
+
+                                        <b><h5>Things I <b>would</b> do on a GUI</h5></b>
+                                        <ul class="uk-list">
+                                            <li>Browse the internet</li>
+                                            <li>Navigate through extremely complex file structures with long names</li>
+                                            <li>Play Games</li>
+                                        </ul>
+
+
+                                    </p>
+
+                                </article>
+
+                    </div>
+
+            </div>
+
+    </body>
+</html>

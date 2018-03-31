@@ -1,0 +1,56 @@
+.n-mainpage {
+
+    background-color: #dae2e5;
+    margin-right: 0px;
+    padding-left: 0px;
+    max-width: 100%;
+
+}
+
+.n-button {
+
+
+    background-color: #3f88c5;
+    color:white;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+}
+
+.n-nav {
+
+    background-color: #3f88c5;
+
+}
+
+.n-article {
+
+    margin: auto;
+    max-width: 60%;
+    background-color: #eff9fc;
+    border-radius: 10px;
+    padding: 70px;
+    line-height: 2.4em;
+    
+
+}
+
+.n-articletext {
+
+    font-size: 1.2em;
+
+}
+
+.n-mainhead {
+
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 5em;
+
+}
+
+.n-codespace {
+
+    padding-bottom: 50px;
+
+} 
